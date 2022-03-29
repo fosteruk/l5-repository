@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98fa6dd9dfe1bafaa4c8b2c25c48c456",
+    "content-hash": "a5baa3c4024864b42f503b54f0e5ecfa",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1120,13 +1120,46 @@
         },
         {
             "name": "prettus/laravel-validation",
-            "version": "1.4.0",
+            "version": "dev-master-bo",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fosteruk/laravel-validator.git",
-                "reference": "origin/master-bo"
+                "reference": "fb1fcdf92bdbc439ac34f373975e3161e047f8cd"
             },
-            "type": "library"
+            "require": {
+                "illuminate/support": "~5.4|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/validation": "~5.4|^6.0|^7.0|^8.0|^9.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Prettus\\Validator\\": "src/Prettus/Validator/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Anderson Andrade",
+                    "homepage": "http://andersonandra.de",
+                    "email": "contato@andersonandra.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Validation Service",
+            "homepage": "http://andersao.github.io/laravel-validation",
+            "keywords": [
+                "laravel",
+                "service",
+                "validation"
+            ],
+            "support": {
+                "email": "contato@andersonandra.de",
+                "issues": "https://github.com/andersao/laravel-validation/issues",
+                "wiki": "https://github.com/andersao/laravel-validation",
+                "source": "https://github.com/andersao/laravel-validation",
+                "docs": "http://andersao.github.io/laravel-validation"
+            },
+            "time": "2022-03-29T01:26:53+00:00"
         },
         {
             "name": "psr/container",
@@ -3287,7 +3320,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "prettus/laravel-validation": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
