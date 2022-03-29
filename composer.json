@@ -20,9 +20,9 @@
   "homepage": "http://andersao.github.io/l5-repository",
   "support": {
     "email": "contato@andersonandra.de",
-    "issues":"https://github.com/andersao/l5-repository/issues",
-    "wiki":"https://github.com/andersao/l5-repository",
-    "source":"https://github.com/andersao/l5-repository",
+    "issues": "https://github.com/andersao/l5-repository/issues",
+    "wiki": "https://github.com/andersao/l5-repository",
+    "source": "https://github.com/andersao/l5-repository",
     "docs": "http://andersao.github.io/l5-repository"
   },
   "require": {
@@ -56,5 +56,18 @@
       ]
     }
   },
-  "minimum-stability": "stable"
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "prettus/laravel-validation",
+        "version": "1.4.0",
+        "source": {
+          "url": "https://github.com/fosteruk/laravel-validator.git",
+          "type": "git",
+          "reference": "origin/master-bo"
+        }
+      }
+    }
+  ]
 }
