@@ -60,6 +60,16 @@
           "url": "https://github.com/fosteruk/laravel-validator.git",
           "type": "git",
           "reference": "origin/master-bo"
+        },
+        "require": {
+          "php": ">=5.4.0",
+          "illuminate/support": "~5.4|^6.0|^7.0|^8.0|^9.0",
+          "illuminate/validation": "~5.4|^6.0|^7.0|^8.0|^9.0"
+        },
+        "autoload": {
+          "psr-4": {
+            "Prettus\\Validator\\": "src/Prettus/Validator/"
+          }
         }
       }
     }
