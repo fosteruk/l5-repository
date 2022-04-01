@@ -415,7 +415,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
      *
      * @return mixed
      */
-    public function firstOrNew(array $attributes = [])
+    public function firstOrNew(array $attributes = [], array $values = [])
     {
         $this->applyCriteria();
         $this->applyScope();
@@ -423,7 +423,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
         $temporarySkipPresenter = $this->skipPresenter;
         $this->skipPresenter(true);
 
-        $model = $this->model->firstOrNew($attributes);
+        $model = $this->model->firstOrNew($attributes, $values);
         $this->skipPresenter($temporarySkipPresenter);
 
         $this->resetModel();
@@ -438,7 +438,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
      *
      * @return mixed
      */
-    public function firstOrCreate(array $attributes = [])
+    public function firstOrCreate(array $attributes = [], array $values = [])
     {
         $this->applyCriteria();
         $this->applyScope();
@@ -446,7 +446,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
         $temporarySkipPresenter = $this->skipPresenter;
         $this->skipPresenter(true);
 
-        $model = $this->model->firstOrCreate($attributes);
+        $model = $this->model->firstOrCreate($attributes, $values);
         $this->skipPresenter($temporarySkipPresenter);
 
         $this->resetModel();

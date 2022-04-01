@@ -1,4 +1,5 @@
 <?php
+
 namespace Prettus\Repository\Contracts;
 
 /**
@@ -283,19 +284,21 @@ interface RepositoryInterface
      * Retrieve first data of repository, or return new Entity
      *
      * @param array $attributes
+     * @param array $values
      *
      * @return mixed
      */
-    public function firstOrNew(array $attributes = []);
+    public function firstOrNew(array $attributes = [], array $values = []);
 
     /**
      * Retrieve first data of repository, or create new Entity
      *
      * @param array $attributes
+     * @param array $values
      *
      * @return mixed
      */
-    public function firstOrCreate(array $attributes = []);
+    public function firstOrCreate(array $attributes = [], array $values = []);
 
     /**
      * Trigger static method calls to the model
